@@ -1,0 +1,23 @@
+.carousel {
+    width: 500px; /*fixed width to fit 1x image.*/
+    overflow: hidden; /*hides other images in child div.*/
+    background-color:aquamarine;
+    height: auto;
+    margin: 0 auto; /*centers div - only works if have fixed width.*/
+}
+
+.slides {
+    width: 500%;
+    display: flex;
+    position: relative;
+}
+
+.slide {
+    flex: 0 0 100%; /*this makes sure the slide takes up the entire width of its container.*/
+}
+
+.nav-dots {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
