@@ -45,6 +45,8 @@ function createImageCarousel() {
     document.querySelector(".prev-arrow").addEventListener("click", prevSlide);
     document.querySelector(".next-arrow").addEventListener("click", nextSlide); 
 
+    setInterval(nextSlide, 5000);
+
     trackCurrentSlide(); // initilise carousel.
 
 }
