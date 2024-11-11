@@ -19,9 +19,10 @@ function createImageCarousel() {
         trackCurrentSlide();
     }
 
-    // function jumpToSlide() {
-        // click dot
-    // }
+    function jumpToSlide(index) { // we get the index from the forEach when we render DOM dots.
+        currentSlideIndex = index;
+        trackCurrentSlide();
+    }
 
     // then set up event listeners.
     //left scroll button and on click, call scroll left.
