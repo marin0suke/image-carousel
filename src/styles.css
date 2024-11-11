@@ -52,6 +52,9 @@
     display: inline-block; /* Ensure they're inline and visible */
 }
 
+.nav-dot.active {
+    background-color: black;
+}
 
 .dot-container {
     z-index: 10;
