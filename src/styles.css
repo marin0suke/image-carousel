@@ -1,7 +1,6 @@
 .carousel {
     width: 500px; /*fixed width to fit 1x image.*/
     overflow: hidden; /*hides other images in child div.*/
-    background-color:aquamarine;
     margin: 0 auto; /*centers div - only works if have fixed width.*/
     position: relative; /*so can position arrows*/
 }
@@ -33,6 +32,7 @@
     background-color: rgba(255, 255, 255, 0.5); /*background for visibility.*/
     padding: 5px;
     z-index: 10; /*makes sure they're on top and visible.*/
+    font-weight: bold;
 }
 
 .prev-arrow {
@@ -43,8 +43,27 @@
     right: 10px;
 }
 
-.nav-dots {
+.nav-dot {
     width: 10px;
     height: 10px;
+    background-color: gray;
     border-radius: 50%;
+    margin: 5px;
+    display: inline-block; /* Ensure they're inline and visible */
+}
+
+
+.dot-container {
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5); /*background for visibility.*/
+    border-radius: 25px;
+    width: fit-content;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%; /* Start at the center of the container */
+    transform: translateX(-50%); /* Offset by half of its width to center */
 }
