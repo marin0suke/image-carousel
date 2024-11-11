@@ -2,18 +2,44 @@
     width: 500px; /*fixed width to fit 1x image.*/
     overflow: hidden; /*hides other images in child div.*/
     background-color:aquamarine;
-    height: auto;
     margin: 0 auto; /*centers div - only works if have fixed width.*/
+    position: relative; /*so can position arrows*/
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
 }
 
 .slides {
-    width: 500%;
+    width: 100%;
     display: flex;
     position: relative;
+    transition: transform 0.3s ease; /*for a smooth transition.*/
 }
 
 .slide {
     flex: 0 0 100%; /*this makes sure the slide takes up the entire width of its container.*/
+}
+
+.prev-arrow,
+.next-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.5); /*background for visibility.*/
+    padding: 5px;
+    z-index: 10; /*makes sure they're on top and visible.*/
+}
+
+.prev-arrow {
+    left: 10px;
+}
+
+.next-arrow {
+    right: 10px;
 }
 
 .nav-dots {
